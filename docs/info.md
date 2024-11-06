@@ -10,11 +10,8 @@ You can also include images in this folder and reference them in the markdown. E
 ## How it works
 
 In wireless communication (e.g., Wi-Fi, Bluetooth), data is often transmitted in bursts or frames. The FlexiPacketEngine IC can be used to structure the transmitted frames and include metadata about the length, sequence, and other characteristics of each frame. Below is the representation of the crafted output Packet.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|               Header                     |                                   Payloads                                           |            Footer              |
-| Sequence Number | Number of Data Packets | All Input 32-Bit Data appear as output at every Clock Cycle in same order as Input   |       End of Data Frame        |
-|   31-16 bit     |      15-0 bit          | Payload 1 | Payload 2 | Payload 3 | Payload 4 | ..................... | Last Payload | All 32 bit Set HIGH 0xFFFFFFFF |
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+![Data Packet](https://github.com/user-attachments/assets/e2c27d65-5360-4cc5-89e1-700cac182c06)
+
 
 The sequence number can help detect packet loss due to interference or signal degradation, enabling retransmission if needed.
 
