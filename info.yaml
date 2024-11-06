@@ -1,45 +1,100 @@
 # Tiny Tapeout project information
 project:
-  title:        ""      # Project title
-  author:       ""      # Your name
+  title:        "FlexiPacketEngine"      # Project title
+  author:       "Sravani Durga, Shubham Gupta"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  ""      # One line description of what your project does
+  description:  "Encapsuling the 32bit Incoming Data with Header (Sequence Number, Number of Data Packets) and Footer"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
-  clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
+  clock_hz:     100MHz       # Clock frequency in Hz (or 0 if not applicable)
 
   # How many tiles your design occupies? A single tile is about 167x108 uM.
-  tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+  tiles: "8x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_example"
+  top_module:  "tt_um_FlexiPacketEngine"
 
   # List your project's source files here.
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
-    - "project.v"
+    - "tt_um_FlexiPacketEngine.v"
+    - "Testbench.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[0]: "clk"
+  ui[1]: "resetn"
+  ui[2]: "validIn"
+  ui[3]: "lastIn"
+  ui[4]: "dataIn[0]"
+  ui[5]: "dataIn[1]"
+  ui[6]: "dataIn[2]"
+  ui[7]: "dataIn[3]"
+  ui[8]: "dataIn[4]"
+  ui[9]: "dataIn[5]"
+  ui[10]: "dataIn[6]"
+  ui[11]: "dataIn[7]"
+  ui[12]: "dataIn[8]"
+  ui[13]: "dataIn[9]"
+  ui[14]: "dataIn[10]"
+  ui[15]: "dataIn[11]"
+  ui[16]: "dataIn[12]"
+  ui[17]: "dataIn[13]"
+  ui[18]: "dataIn[14]"
+  ui[19]: "dataIn[15]"
+  ui[20]: "dataIn[16]"
+  ui[21]: "dataIn[17]"
+  ui[22]: "dataIn[18]"
+  ui[23]: "dataIn[19]"
+  ui[24]: "dataIn[20]"
+  ui[25]: "dataIn[21]"
+  ui[26]: "dataIn[22]"
+  ui[27]: "dataIn[23]"
+  ui[28]: "dataIn[24]"
+  ui[29]: "dataIn[25]"
+  ui[30]: "dataIn[26]"
+  ui[31]: "dataIn[27]"
+  ui[32]: "dataIn[28]"
+  ui[33]: "dataIn[29]"
+  ui[34]: "dataIn[30]"
+  ui[35]: "dataIn[31]"
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "validOut"
+  uo[1]: "lastOut"
+  uo[2]: "dataOut[0]"
+  uo[3]: "dataOut[1]"
+  uo[4]: "dataOut[2]"
+  uo[5]: "dataOut[3]"
+  uo[6]: "dataOut[4]"
+  uo[7]: "dataOut[5]"
+  uo[8]: "dataOut[6]"
+  uo[9]: "dataOut[7]"
+  uo[10]: "dataOut[8]"
+  uo[11]: "dataOut[9]"
+  uo[12]: "dataOut[10]"
+  uo[13]: "dataOut[11]"
+  uo[14]: "dataOut[12]"
+  uo[15]: "dataOut[13]"
+  uo[16]: "dataOut[14]"
+  uo[17]: "dataOut[15]"
+  uo[18]: "dataOut[16]"
+  uo[19]: "dataOut[17]"
+  uo[20]: "dataOut[18]"
+  uo[21]: "dataOut[19]"
+  uo[22]: "dataOut[20]"
+  uo[23]: "dataOut[21]"
+  uo[24]: "dataOut[22]"
+  uo[25]: "dataOut[23]"
+  uo[26]: "dataOut[24]"
+  uo[27]: "dataOut[25]"
+  uo[28]: "dataOut[26]"
+  uo[29]: "dataOut[27]"
+  uo[30]: "dataOut[28]"
+  uo[31]: "dataOut[29]"
+  uo[32]: "dataOut[30]"
+  uo[33]: "dataOut[31]"
 
   # Bidirectional pins
   uio[0]: ""
